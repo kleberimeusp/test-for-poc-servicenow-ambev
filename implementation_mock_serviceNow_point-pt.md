@@ -95,4 +95,4 @@ Esta implementação opcional oferece uma demonstração prática da solução i
 - Compreensão das decisões técnicas.  
 - Apresentação das habilidades com as tecnologias envolvidas.
 
-Os endpoints versionados garantem que a solução seja escalável, sustentável e preparada para futuras melhorias. 🚀
+Os endpoints versionados garantem que a solução seja escalável, sustentável e preparada para futuras melhorias. 

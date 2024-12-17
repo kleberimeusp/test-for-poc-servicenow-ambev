@@ -119,4 +119,4 @@ If PONTO system emulation is required:
 
 ---
 
-This proposal ensures that the process is robust, scalable, and fully auditable. If you need to detail any specific point or implement the mock together, just let me know!
+This proposal ensures that the process is robust, scalable, and fully auditable. If you need to detail any specific point or implement the mock together, contact XPTO Architecture Department!
