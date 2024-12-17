@@ -53,7 +53,7 @@ Este repositório contém a documentação técnica completa da integração ent
 4. Utilize as ferramentas sugeridas para monitorar e analisar o desempenho.
 
 ## **Licença**
-Este projeto segue a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+Este projeto segue a licença da emprrsa XPTO.
 
 ---
 
