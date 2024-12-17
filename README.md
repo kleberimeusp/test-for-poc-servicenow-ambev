@@ -116,4 +116,4 @@ Caso precise emular o sistema PONTO:
 
 ---
 
-Essa proposta garante que o processo seja robusto, escalável e totalmente auditável. Caso precise detalhar algum ponto específico ou implementar o mock em conjunto, é só avisar! 🚀
+Essa proposta garante que o processo seja robusto, escalável e totalmente auditável. Caso precise detalhar algum ponto específico ou implementar o mock em conjunto, é só avisar! 
