@@ -20,14 +20,14 @@ The architecture will be based on integration via **REST API** or **SOAP** (depe
     - **Flow Designer:** Workflows to manage requests.  
     - **Custom Scripts/API Integrations:** REST/SOAP calls to the PONTO system.  
     - **Tables (CMDB or Custom):** Data and log storage.  
-  - **PONTO API:** Endpoints (query, clock-in submission, status return).  
+  - **PONTO API:** Versioned endpoints for maintainability.
 
 ---
 
 ## **2. Process Flow**
 
 1. **PONTO System Query:**  
-   - ServiceNow performs a **GET call** (via REST/SOAP) to the PONTO system to check for existing clock-ins or inconsistencies.  
+   - ServiceNow performs a **GET call** to `GET /api/v1/ponto/records` (via REST/SOAP) to check for existing clock-ins or inconsistencies.  
    - The response is processed and stored in the ServiceNow table.  
 
 2. **Request Validation:**  
@@ -35,10 +35,10 @@ The architecture will be based on integration via **REST API** or **SOAP** (depe
    - ServiceNow validates the data for completeness and accuracy.  
 
 3. **Submission to the PONTO System:**  
-   - Upon approval, ServiceNow performs a **POST call** (REST/SOAP) to send the clock-in data to the PONTO system.  
+   - Upon approval, ServiceNow performs a **POST call** to `POST /api/v1/ponto/clock-in` (REST/SOAP) to send the clock-in data to the PONTO system.  
 
 4. **Status Update:**  
-   - ServiceNow periodically queries or receives callbacks from the PONTO system to check the status (success or error).  
+   - ServiceNow periodically queries `GET /api/v1/ponto/status/{id}` or receives callbacks from the PONTO system to check the status (success or error).  
    - The status is updated in the ServiceNow request.
 
 5. **Logs and Auditing:**  
@@ -55,7 +55,10 @@ The architecture will be based on integration via **REST API** or **SOAP** (depe
    - **Business Rules**: Validations and process automation.  
 
 2. **PONTO System:**  
-   - REST/SOAP API (mocked if a real environment does not exist).  
+   - Versioned REST/SOAP API endpoints, such as:  
+     - `GET /api/v1/ponto/records`  
+     - `POST /api/v1/ponto/clock-in`  
+     - `GET /api/v1/ponto/status/{id}`  
 
 3. **Monitoring (Optional):**  
    - **Splunk/ServiceNow Performance Analytics:** For logs and metrics.  
@@ -84,10 +87,10 @@ The architecture will be based on integration via **REST API** or **SOAP** (depe
 ## **5. Mock for Interview (Optional)**
 
 If PONTO system emulation is required:  
-1. Use **Postman Mock Server** or **JSON Server** to simulate endpoints such as:  
-   - `GET /ponto/records` → Returns existing clock-ins.  
-   - `POST /ponto/clock-in` → Receives clock-in data and returns success/error.  
-   - `GET /ponto/status/{id}` → Returns the operation status.  
+1. Use **Postman Mock Server** or **JSON Server** to simulate versioned endpoints such as:  
+   - `GET /api/v1/ponto/records` → Returns existing clock-ins.  
+   - `POST /api/v1/ponto/clock-in` → Receives clock-in data and returns success/error.  
+   - `GET /api/v1/ponto/status/{id}` → Returns the operation status.  
 
 2. Integrate with ServiceNow using **REST Integration**.
 
@@ -103,7 +106,7 @@ If PONTO system emulation is required:
    - Detailed process flow with the sequence of calls.
 
 2. **Mock and Demonstration:**  
-   - Simulated endpoints.  
+   - Simulated versioned endpoints.  
    - Configured code in ServiceNow Flow Designer and Scripted API.
 
 ---
@@ -116,4 +119,4 @@ If PONTO system emulation is required:
 
 ---
 
-This proposal ensures that the process is robust, scalable, and fully auditable. If you need to detail any specific point or implement the mock together, just let me know! 
+This proposal ensures that the process is robust, scalable, and fully auditable. If you need to detail any specific point or implement the mock together, just let me know!
