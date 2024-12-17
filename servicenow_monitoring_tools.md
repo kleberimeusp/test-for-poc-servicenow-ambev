@@ -1,92 +1,92 @@
 
-# Monitoring Tools for ServiceNow Integration
+# Ferramentas de Monitoramento para Integração ServiceNow
 
-## **Technologies & Deliverables**
+## **Tecnologias & Entregáveis**
 
 ### **ServiceNow:**
-The primary platform for request management and integration.
+Plataforma principal para gestão de solicitações e integração.
 
-### **Database:**
-Utilize the native ServiceNow database for data storage.
+### **Banco de Dados:**
+Utilize o banco de dados nativo do ServiceNow para armazenamento de dados.
 
-### **Monitoring Tools:**
-Below are the best monitoring tools for ServiceNow-based solutions:
+### **Ferramentas de Monitoramento:**
+Abaixo estão as melhores ferramentas de monitoramento para soluções baseadas em ServiceNow:
 
 ---
 
 ## **1. ServiceNow Performance Analytics**
-### **Description:**
-- Native ServiceNow solution for performance analysis, metrics, and key performance indicators (KPIs).  
-- Provides customizable dashboards and real-time reporting.
+### **Descrição:**
+- Solução nativa do ServiceNow para análise de desempenho, métricas e indicadores-chave (KPIs).  
+- Fornece painéis personalizáveis e relatórios em tempo real.
 
-### **Why Use It?**
-- Fully **native** to ServiceNow with no external dependencies.  
-- Monitors **SLA performance**, integration failures, and process efficiency.  
-- Quick and simple configuration within the ServiceNow ecosystem.
+### **Por que Usar?**
+- Totalmente **nativo** do ServiceNow, sem dependência de ferramentas externas.  
+- Monitora o desempenho de **SLAs**, falhas de integração e eficiência dos processos.  
+- Configuração simples e rápida dentro do ecossistema ServiceNow.
 
 ---
 
 ## **2. ServiceNow Event Management**
-### **Description:**
-- Part of ServiceNow's **IT Operations Management (ITOM)** suite.  
-- Centralizes and monitors events from ServiceNow and external systems.
+### **Descrição:**
+- Parte do módulo **ITOM (IT Operations Management)** do ServiceNow.  
+- Centraliza e monitora eventos de sistemas internos e externos ao ServiceNow.
 
-### **Why Use It?**
-- Integrates seamlessly with other ServiceNow modules.  
-- Correlates events and triggers alerts for process failures or integration errors.  
-- Provides real-time **alerts and escalations** for critical failures.
-
----
-
-## **3. Splunk (Integration with ServiceNow)**
-### **Description:**
-- A robust external tool for **log monitoring**, error detection, and advanced real-time analytics.  
-- Integrated with ServiceNow using **APIs** or native connectors.
-
-### **Why Use It?**
-- Enables advanced **log analysis** and failure detection.  
-- Customizable dashboards to visualize errors, performance metrics, and system failures.  
-- Scalability for large data volumes.
+### **Por que Usar?**
+- Integra-se de forma transparente com outros módulos do ServiceNow.  
+- Correla eventos e aciona alertas em caso de falhas de processos ou integrações.  
+- Oferece alertas em **tempo real** e escalonamentos críticos.
 
 ---
 
-## **4. ServiceNow Integration with Datadog**
-### **Description:**
-- Datadog is a cloud-based monitoring platform providing end-to-end visibility of application infrastructure and performance.
+## **3. Splunk (Integração com ServiceNow)**
+### **Descrição:**
+- Ferramenta robusta para **monitoramento de logs**, detecção de erros e análise avançada em tempo real.  
+- Integrada com ServiceNow usando **APIs** ou conectores nativos.
 
-### **Why Use It?**
-- Tracks **latency** and failures in REST/SOAP integrations.  
-- Real-time alerts for system errors and integration delays.  
-- Provides interactive, detailed dashboards for performance monitoring.
-
----
-
-## **5. ServiceNow Integration with ELK Stack (Elasticsearch, Logstash, Kibana)**
-### **Description:**
-- ELK Stack can be used to collect, index, and visualize logs from ServiceNow processes and integrations.
-
-### **Why Use It?**
-- Provides flexibility and advanced log management.  
-- Kibana offers interactive visualizations for performance and error detection.  
-- Cost-effective compared to proprietary tools.
+### **Por que Usar?**
+- Permite análise avançada de **logs** e detecção de falhas.  
+- Dashboards personalizáveis para visualizar erros, métricas de desempenho e falhas do sistema.  
+- Escalável para grandes volumes de dados.
 
 ---
 
-## **Summary of Recommendations**
+## **4. ServiceNow Integração com Datadog**
+### **Descrição:**
+- Plataforma de monitoramento em nuvem que fornece visibilidade ponta a ponta da infraestrutura e desempenho de aplicações.
 
-| **Tool**                     | **Best Use Case**                                |
-|------------------------------|-------------------------------------------------|
-| **ServiceNow Performance Analytics** | Native monitoring for metrics and KPIs.       |
-| **ServiceNow Event Management**      | Event correlation and alert management.      |
-| **Splunk**                            | Advanced log analysis and large data volumes.|
-| **Datadog**                          | Cloud-based monitoring for real-time alerts. |
-| **ELK Stack**                         | Flexible and cost-effective log management.  |
+### **Por que Usar?**
+- Rastreia **latência** e falhas em integrações REST/SOAP.  
+- Gera alertas em tempo real para erros no sistema e atrasos de integração.  
+- Oferece painéis interativos e detalhados para monitoramento de desempenho.
 
 ---
 
-## **Final Recommendation**
-- **ServiceNow Performance Analytics**: Best option for native monitoring.  
-- **Splunk** or **Datadog**: Ideal for advanced external monitoring and deep log analysis.  
-- **ELK Stack**: A flexible and cost-effective solution for log management.
+## **5. ServiceNow Integração com ELK Stack (Elasticsearch, Logstash, Kibana)**
+### **Descrição:**
+- A ELK Stack pode ser usada para coletar, indexar e visualizar logs de processos e integrações do ServiceNow.
 
-By using these tools, the ServiceNow-PONTO integration will have robust monitoring, ensuring visibility, scalability, and proactive error detection.
+### **Por que Usar?**
+- Proporciona flexibilidade e gerenciamento avançado de logs.  
+- Kibana oferece visualizações interativas para desempenho e detecção de erros.  
+- Solução econômica em comparação com ferramentas proprietárias.
+
+---
+
+## **Resumo de Recomendações**
+
+| **Ferramenta**                     | **Melhor Caso de Uso**                          |
+|-----------------------------------|-----------------------------------------------|
+| **ServiceNow Performance Analytics** | Monitoramento nativo de métricas e KPIs.        |
+| **ServiceNow Event Management**      | Correlação de eventos e gestão de alertas.      |
+| **Splunk**                           | Análise avançada de logs e grandes volumes.     |
+| **Datadog**                          | Monitoramento em nuvem com alertas em tempo real.|
+| **ELK Stack**                        | Gerenciamento de logs flexível e econômico.     |
+
+---
+
+## **Recomendação Final**
+- **ServiceNow Performance Analytics**: Melhor opção para monitoramento nativo.  
+- **Splunk** ou **Datadog**: Ideal para monitoramento externo avançado e análise profunda de logs.  
+- **ELK Stack**: Solução flexível e econômica para gerenciamento de logs.
+
+Com o uso dessas ferramentas, a integração ServiceNow-PONTO terá um monitoramento robusto, garantindo visibilidade, escalabilidade e detecção proativa de erros.
