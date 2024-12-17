@@ -57,4 +57,4 @@ Este projeto segue a licença da emprrsa XPTO.
 
 ---
 
-**Última Atualização**: `$(date)`
+**Última Atualização**: `18/12/2024 10:01:02`
