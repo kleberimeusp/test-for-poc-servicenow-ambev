@@ -1,84 +1,84 @@
 
-# Architecture Document - ServiceNow Integration with PONTO System
+# Documento de Arquitetura - Integração ServiceNow com Sistema PONTO
 
-## **1. Objective**
-This document presents the end-to-end architecture for the integration between **ServiceNow** and the **PONTO System**, including the technical decisions taken and the use of the **C4 model** to describe the solution.
+## **1. Objetivo**
+Este documento apresenta a arquitetura ponta a ponta para a integração entre **ServiceNow** e o **Sistema PONTO**, incluindo as decisões técnicas tomadas e a utilização do modelo **C4** para descrever a solução.
 
 ---
 
-## **2. C4 Model**
+## **2. Modelo C4**
 
-### **2.1. Level 1 - Context**
-The main interaction is between **ServiceNow** (request management platform) and the **PONTO System** (legacy), where clock-in records are checked, validated, and submitted.
+### **2.1. Nível 1 - Contexto**
+A interação principal é entre **ServiceNow** (plataforma de gestão de solicitações) e o **Sistema PONTO** (legado), onde as marcações de ponto são verificadas, validadas e registradas.
 
-- **ServiceNow**: Central platform for workflow automation.
-- **Employees**: Users who request clock-in registrations.
-- **PONTO System**: External legacy system that receives the clock-in submissions.
+- **ServiceNow**: Plataforma central para automação do fluxo de trabalho.
+- **Colaboradores**: Usuários que solicitam a marcação de ponto.
+- **Sistema PONTO**: Sistema externo legado que recebe as marcações.
 
-### **2.2. Level 2 - Containers**
+### **2.2. Nível 2 - Contêineres**
 - **ServiceNow**:
-  - **Flow Designer**: Manages the automation flow for queries and submissions to the PONTO system.
-  - **Scripted REST API**: Implements custom endpoints for REST/SOAP communication.
-  - **Database**: ServiceNow’s native database for request logs and records.
-- **PONTO System**:
-  - REST/SOAP API: Interface for querying and submitting clock-in data.
+  - **Flow Designer**: Gerencia o fluxo de automação para consultas e envio ao Sistema PONTO.
+  - **Scripted REST API**: Implementa endpoints personalizados para comunicação REST/SOAP.
+  - **Database**: Banco de dados nativo do ServiceNow para registros de solicitações e logs.
+- **Sistema PONTO**:
+  - API REST/SOAP: Interface para consulta e envio de dados de marcação.
 
-- **Monitoring Tool (Optional):**
-  - **Performance Analytics** or integration with **Splunk**/**Datadog** for status and log monitoring.
+- **Ferramenta de Monitoramento (Opcional):**
+  - **Performance Analytics** ou integração com **Splunk**/**Datadog** para monitorar status e logs.
 
-### **2.3. Level 3 - Components**
-| **Component**                | **Function**                                  |
-|------------------------------|-----------------------------------------------|
-| **Flow Designer**            | Manages workflows for querying and submissions.|
-| **Custom Scripts/API**       | Implements REST/SOAP calls.                   |
-| **Auditing and Logs**        | Tracks actions and failures for traceability. |
-| **Request Table**            | Stores requests and their statuses.           |
-| **PONTO API Endpoint**       | Interface for the PONTO system.               |
-
----
-
-## **3. Process Flow**
-
-1. **PONTO System Query**:  
-   - ServiceNow performs a **GET call** to check existing clock-ins.  
-   - The response is stored in ServiceNow’s database.
-
-2. **Request Validation and Submission**:  
-   - The employee submits a clock-in request through ServiceNow.  
-   - ServiceNow validates and stores the data.
-
-3. **Submission to PONTO System**:  
-   - ServiceNow performs a **POST call** with the validated data to the PONTO System.
-
-4. **Status Verification**:  
-   - ServiceNow queries the status using **GET** or waits for a callback.  
-   - Updates the request table with the result.
-
-5. **Auditing and Logs**:  
-   - All actions are logged for auditing and traceability purposes.
+### **2.3. Nível 3 - Componentes**
+| **Componente**                  | **Função**                                     |
+|--------------------------------|-----------------------------------------------|
+| **Flow Designer**              | Gerencia os fluxos de consulta e envio.       |
+| **Custom Scripts/API**         | Implementação das chamadas REST/SOAP.         |
+| **Auditoria e Logs**           | Registra ações e falhas para rastreamento.    |
+| **Tabela de Solicitações**     | Armazena as solicitações e seus status.       |
+| **Endpoint PONTO API**         | Interface do Sistema PONTO para integração.   |
 
 ---
 
-## **4. Technical Decisions**
+## **3. Fluxo do Processo**
 
-| **Decision**                           | **Justification**                           |
-|----------------------------------------|--------------------------------------------|
-| **REST/SOAP API**                      | Flexibility in integrating with legacy systems.|
-| **ServiceNow Performance Analytics**   | Native and integrated monitoring solution. |
-| **Auditing via Logs**                  | Ensures traceability and quick issue resolution.|
-| **Asynchronous Queue (Optional)**      | Prevents overload during peak request periods.|
+1. **Consulta ao Sistema PONTO**:  
+   - ServiceNow realiza uma chamada **GET** para verificar marcações existentes.  
+   - A resposta é armazenada na tabela de dados no ServiceNow.
+
+2. **Validação e Abertura da Solicitação**:  
+   - O colaborador envia a solicitação de marcação no ServiceNow.  
+   - O sistema valida os dados e os armazena.  
+
+3. **Envio ao Sistema PONTO**:  
+   - ServiceNow faz uma chamada **POST** com os dados validados para o Sistema PONTO.
+
+4. **Verificação de Status**:  
+   - ServiceNow consulta o status usando **GET** ou aguarda callback.  
+   - Atualiza a tabela de solicitações com o resultado.
+
+5. **Auditoria e Logs**:  
+   - Todas as ações são registradas para fins de auditoria e rastreamento.
 
 ---
 
-## **5. Tools Used**
+## **4. Decisões Técnicas**
 
-- **ServiceNow**: Primary platform for workflow management and automation.  
-- **PONTO System**: Legacy system with an integration API.  
-- **Monitoring Tools**:  
-  - **Performance Analytics** (native) or integration with **Splunk**/**Datadog**.  
-- **Mock API** (optional): Use **Postman** or **JSON Server** to simulate the PONTO API.  
+| **Decisão**                                | **Justificativa**                           |
+|-------------------------------------------|-------------------------------------------|
+| **REST/SOAP API**                         | Flexibilidade na integração com sistemas legados. |
+| **ServiceNow Performance Analytics**      | Monitoramento nativo e integrado.          |
+| **Auditoria via Logs**                    | Garantia de rastreamento e resolução rápida. |
+| **Fila Assíncrona (Opcional)**            | Evitar sobrecarga em picos de requisições. |
 
 ---
 
-## **6. Conclusion**
-This document provides a detailed end-to-end architecture using the C4 model to describe the solution in layers. Technical decisions were made focusing on robustness, scalability, and traceability to ensure efficient integration between ServiceNow and the legacy PONTO system.
+## **5. Ferramentas Utilizadas**
+
+- **ServiceNow**: Principal plataforma de gestão e automação.  
+- **Sistema PONTO**: Sistema legado com API de integração.  
+- **Ferramenta de Monitoramento**:  
+  - **Performance Analytics** (nativo) ou integração com **Splunk**/**Datadog**.  
+- **Mock API** (opcional): Uso do **Postman** ou **JSON Server** para simular PONTO API.  
+
+---
+
+## **6. Conclusão**
+Este documento detalha a arquitetura ponta a ponta, utilizando o modelo C4 para descrever a solução em camadas. As decisões técnicas foram tomadas com foco em robustez, escalabilidade e rastreabilidade para garantir uma integração eficiente entre ServiceNow e o sistema legado PONTO.
