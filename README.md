@@ -8,14 +8,14 @@ Este repositório contém a documentação técnica completa da integração ent
 
 ### **1. Visão Geral da Arquitetura**
 - **Documentos**:
-  - [Documento de Arquitetura (PT)](architecture_document_servicenow_ponto-pt.md)
-  - [Architecture Document (EN)](architecture_document_servicenow_ponto-en.md)
+  - [Documento de Arquitetura (PT)](img/architecture_document_servicenow_ponto-pt.md)
+  - [Architecture Document (EN)](img/architecture_document_servicenow_ponto-en.md)
 - **Proposta**: Explica a arquitetura completa da solução, com justificativas e decisões técnicas.
 
 ### **2. Modelo C4**
 - **Documentos**:
-  - [C4 Model - Documentação (PT)](c4_model_documentacao-pt.md)
-  - [C4 Model - Documentation (EN)](c4_model_documentation-en.md)
+  - [C4 Model - Documentação (PT)](img/c4_model_documentacao-pt.md)
+  - [C4 Model - Documentation (EN)](img/c4_model_documentation-en.md)
 - **Descrição**:
   - **Nível 1 - Contexto**: Relação entre sistemas e usuários.
   - **Nível 2 - Contêineres**: Estrutura de contêineres nos sistemas.
@@ -23,20 +23,20 @@ Este repositório contém a documentação técnica completa da integração ent
 
 ### **3. Implementação e Mock**
 - **Documentos**:
-  - [Implementação Mock ServiceNow-PONTO (PT)](implementation_mock_serviceNow_point-pt.md)
-  - [Mock Implementation ServiceNow-PONTO (EN)](implementation_mock_serviceNow_point-en.md)
+  - [Implementação Mock ServiceNow-PONTO (PT)](img/implementation_mock_serviceNow_point-pt.md)
+  - [Mock Implementation ServiceNow-PONTO (EN)](img/implementation_mock_serviceNow_point-en.md)
 - **Descrição**: Instruções para implementação de um ambiente **mock**, simulando o sistema legado PONTO.
 
 ### **4. Documentação Técnica e Processos**
 - **Documentos**:
-  - [README (PT)](README-pt.md)
-  - [README (EN)](README-en.md)
+  - [README (PT)](img/README-pt.md)
+  - [README (EN)](img/README-en.md)
 - **Descrição**: Explicação prática da solução, incluindo fluxos de integração e ferramentas.
 
 ### **5. Monitoramento e Análise**
 - **Documentos**:
-  - [Ferramentas de Monitoramento (PT)](servicenow_monitoring_tools-pt.md)
-  - [Monitoring Tools (EN)](servicenow_monitoring_tools-en.md)
+  - [Ferramentas de Monitoramento (PT)](img/servicenow_monitoring_tools-pt.md)
+  - [Monitoring Tools (EN)](img/servicenow_monitoring_tools-en.md)
 - **Descrição**: Apresentação das ferramentas de monitoramento como **Performance Analytics**, **Splunk**, e **Datadog**.
 
 ## **Objetivo Final**

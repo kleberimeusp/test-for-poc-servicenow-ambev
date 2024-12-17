@@ -9,7 +9,7 @@ The context level shows the main interactions between **ServiceNow**, the **PONT
 - **PONTO System**: External legacy system that receives clock-in submissions.
 
 ### Diagram:
-![Level 1 - Context](en/01-C4Model-Context-en.png)
+![Level 1 - Context](img/01-C4Model-Context-en.png)
 
 ---
 
@@ -30,13 +30,13 @@ The containers detail the systems and their main components.
 
 ### Diagrams:
 1. **ServiceNow and PONTO System - Containers**  
-![Level 2 - Containers](en/01-C4Model-Containers-en.png)
+![Level 2 - Containers](img/01-C4Model-Containers-en.png)
 
 2. **Flow Designer - Detail**  
-![Flow Designer](en/01-C4Model-Components-Container-02-en.png)
+![Flow Designer](img/01-C4Model-Components-Container-02-en.png)
 
 3. **PONTO System - Detail**  
-![PONTO API](en/01-C4Model-Components-Container-en.png)
+![PONTO API](img/01-C4Model-Components-Container-en.png)
 
 ---
 
@@ -54,13 +54,13 @@ Details of individual components and their functions.
 
 ### Diagrams:
 1. **Components - ServiceNow - Flow Designer**  
-![Flow Designer - Components](en/01-C4Model-Components-en.png)
+![Flow Designer - Components](img/01-C4Model-Components-en.png)
 
 2. **Components - ServiceNow and PONTO System**  
-![Components - ServiceNow and PONTO](en/01-C4Model-Components-SystemContext-en.png)
+![Components - ServiceNow and PONTO](img/01-C4Model-Components-SystemContext-en.png)
 
 3. **System Context**  
-![System Context - ServiceNow](en/01-C4Model-Components-SystemContext-02-en.png)  
+![System Context - ServiceNow](img/01-C4Model-Components-SystemContext-02-en.png)  
 
 ---
 

@@ -10,7 +10,7 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 - **Funcionários**: Usuários que solicitam registros de ponto.
 - **Sistema PONTO**: Sistema legado externo que recebe as submissões de ponto.
 
-![Nível 1 - Contexto](pt/01-C4Model-Context-pt.png)
+![Nível 1 - Contexto](img/01-C4Model-Context-pt.png)
 
 ---
 
@@ -27,7 +27,7 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 ### Ferramenta de Monitoramento (Opcional):
 - **Analytics de Desempenho** ou integração com **Splunk/Datadog** para monitoramento de logs e status.
 
-![Nível 2 - Contêineres](pt/01-C4Model-Containers-pt.png)
+![Nível 2 - Contêineres](img/01-C4Model-Containers-pt.png)
 
 ---
 
@@ -44,13 +44,13 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 
 ### Diagramas:
 #### Componentes no ServiceNow - Flow Designer:
-![Componentes - Flow Designer](pt/01-C4Model-Components-pt.png)
+![Componentes - Flow Designer](img/01-C4Model-Components-pt.png)
 
 #### Container: PONTO API Endpoint:
-![Contêiner - PONTO API Endpoint](pt/01-C4Model-Components-Container-pt.png)
+![Contêiner - PONTO API Endpoint](img/01-C4Model-Components-Container-pt.png)
 
 #### Container: ServiceNow Flow Designer:
-![Contêiner - Flow Designer](pt/01-C4Model-Components-Container-02-pt.png)
+![Contêiner - Flow Designer](img/01-C4Model-Components-Container-02-pt.png)
 
 ---
 
@@ -68,11 +68,11 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 - **ServiceNow**: Centraliza a automação de requisições.
 - **Sistema PONTO**: Recebe as submissões de ponto.
 
-![Contexto - ServiceNow](pt/01-C4Model-Components-SystemContext-pt.png)
-![Contexto - Sistema PONTO](pt/01-C4Model-Components-SystemContext-02-pt.png)
+![Contexto - ServiceNow](img/01-C4Model-Components-SystemContext-pt.png)
+![Contexto - Sistema PONTO](img/01-C4Model-Components-SystemContext-02-pt.png)
 
 ---
 
 ## Fluxo Completo
 ### Diagrama de Interação
-![Interação Completa](pt/01-C4Model-Components-SoftwareSystem-pt.png)
+![Interação Completa](img/01-C4Model-Components-SoftwareSystem-pt.png)
