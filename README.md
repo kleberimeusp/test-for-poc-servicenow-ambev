@@ -8,6 +8,23 @@ This README serves as the central documentation for the integration between Serv
 
 ## Documentation Contents
 
+### Technology Badges
+![ServiceNow](https://img.shields.io/badge/ServiceNow-Quebec-%237159c1?style=for-the-badge&logo=servicenow&logoColor=white)
+![Git](https://img.shields.io/badge/Git-2.40.0-%237159c1?style=for-the-badge&logo=git)
+![Insomnia](https://img.shields.io/badge/insomnia-2023.1.0-%237159c1?style=for-the-badge&logo=insomnia)
+![C#](https://img.shields.io/badge/C%23-10.0-%237159c1?style=for-the-badge&logo=sharp)
+![GO](https://img.shields.io/badge/Go-1.19-%237159c1?style=for-the-badge&logo=go)
+![Java 17](https://img.shields.io/badge/Java-17-%237159c1?style=for-the-badge&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-1.7.0-%237159c1?style=for-the-badge&logo=kotlin)
+![Node.js](https://img.shields.io/badge/Node.js-18.0.0-%237159c1?style=for-the-badge&logo=node.js)
+![PHP](https://img.shields.io/badge/PHP-8.1-%237159c1?style=for-the-badge&logo=php)
+![Python](https://img.shields.io/badge/Python-3.10.0-%237159c1?style=for-the-badge&logo=python)
+![Ruby](https://img.shields.io/badge/Ruby-3.2.0-%237159c1?style=for-the-badge&logo=ruby)
+![Rust](https://img.shields.io/badge/Rust-1.65.0-%237159c1?style=for-the-badge&logo=rust)
+![Scala](https://img.shields.io/badge/Scala-3.2.0-%237159c1?style=for-the-badge&logo=scala)
+![VB.Net](https://img.shields.io/badge/VB.NET-3.2.0-%237159c1?style=for-the-badge&logo=dot-net&logoColor=white)
+
+
 ### 1. System Integration Overview
 - [ServiceNow and PONTO Integration Overview - English](en/ServiceNow_PONTO_Integration_README-en.md)
 - [ServiceNow and PONTO Integration Overview - Português](pt/ServiceNow_PONTO_Integration_README-pt.md)
@@ -31,6 +48,20 @@ This README serves as the central documentation for the integration between Serv
 ### 6. Detailed Architecture Document
 - [ServiceNow and PONTO Integration Architecture Document - English](en/architecture_document_servicenow_ponto-en.md)
 - [ServiceNow and PONTO Integration Architecture Document - Portuguese](pt/architecture_document_servicenow_ponto-pt.md)
+
+### 7. Example Codes using with ServiceNow
+- [VB.Net](code/ServiceNow_PONTO_Integration_VBNet.md)
+
+- [Python](code/ServiceNow_PONTO_Integration_Python.md)
+- [Java](code/ServiceNow_PONTO_Integration_Java.md)
+- [Node.js](code/ServiceNow_PONTO_Integration_Nodejs.md)
+- [PHP](code/ServiceNow_PONTO_Integration_PHP.md)
+- [Ruby](code/ServiceNow_PONTO_Integration_Ruby.md)
+- [C#](code/ServiceNow_PONTO_Integration_CSharp.md)
+- [GO (Golang)](code/ServiceNow_PONTO_Integration_Golang.md)
+- [Kotlin](code/ServiceNow_PONTO_Integration_Kotlin.md)
+- [Rust](code/ServiceNow_PONTO_Integration_Rust.md)
+- [Scala](code/ServiceNow_PONTO_Integration_Scala.md)
 
 ---
 
