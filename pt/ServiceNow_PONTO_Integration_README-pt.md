@@ -162,4 +162,4 @@ if (env === "dev") {
 ---
 
 ## 7. Licença
-Esta configuração de integração está licenciada sob a Licença MIT. Veja `LICENSE` para mais detalhes.
+Esta configuração de integração está licenciada sob a empresa XPTO.
