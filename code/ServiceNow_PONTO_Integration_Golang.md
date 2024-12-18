@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+	"os"
 )
 
 const (
@@ -38,39 +39,75 @@ func loginServiceNow() (string, error) {
 		"username":      username,
 		"password":      password,
 	}
-	payloadBytes, _ := json.Marshal(payload)
-
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(payloadBytes))
+	response, err := sendPostRequest(url, payload, "")
 	if err != nil {
 		return "", err
 	}
-	req.Header.Set("Content-Type", "application/json")
 
-	client := &http.Client{}
-	resp, err := client.Do(req)
+	var result map[string]interface{}
+	err = json.Unmarshal(response, &result)
 	if err != nil {
 		return "", err
 	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("failed to login: %s", resp.Status)
-	}
-
-	body, _ := ioutil.ReadAll(resp.Body)
-	result := make(map[string]interface{})
-	json.Unmarshal(body, &result)
-
 	return result["access_token"].(string), nil
 }
 
 // Query the PONTO System
-func consultaSistemaPonto(token, requisicaoID string) (map[string]interface{}, error) {
+func consultaSistemaPonto(token, requisicaoID string) ([]byte, error) {
 	url := fmt.Sprintf("https://%s/api/now/table/ponto_data?sys_id=%s", instance, requisicaoID)
+	return sendGetRequest(url, token)
+}
+
+// Create a Request in ServiceNow
+func abrirRequisicao(token string, requisicaoData interface{}) ([]byte, error) {
+	url := fmt.Sprintf("https://%s/api/now/table/requisicoes_ponto", instance)
+	return sendPostRequest(url, requisicaoData, token)
+}
+
+// Update Request Status
+func atualizarStatusRequisicao(token, requisicaoID string, statusData interface{}) ([]byte, error) {
+	url := fmt.Sprintf("https://%s/api/now/table/requisicoes_ponto?sys_id=%s", instance, requisicaoID)
+	return sendPutRequest(url, statusData, token)
+}
+
+// Log Audit Data
+func registrarAuditoria(token string, auditData interface{}) ([]byte, error) {
+	url := fmt.Sprintf("https://%s/api/now/table/audit_logs", instance)
+	return sendPostRequest(url, auditData, token)
+}
+
+// Helper Methods
+func sendPostRequest(url string, payload interface{}, token string) ([]byte, error) {
+	data, err := json.Marshal(payload)
+	if err != nil {
+		return nil, err
+	}
+
+	req, err := http.NewRequest("POST", url, bytes.NewBuffer(data))
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Set("Content-Type", "application/json")
+	if token != "" {
+		req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
+	}
+
+	client := &http.Client{}
+	resp, err := client.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+
+	return ioutil.ReadAll(resp.Body)
+}
+
+func sendGetRequest(url, token string) ([]byte, error) {
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return nil, err
 	}
+
 	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
 
 	client := &http.Client{}
@@ -80,24 +117,21 @@ func consultaSistemaPonto(token, requisicaoID string) (map[string]interface{}, e
 	}
 	defer resp.Body.Close()
 
-	body, _ := ioutil.ReadAll(resp.Body)
-	result := make(map[string]interface{})
-	json.Unmarshal(body, &result)
-
-	return result, nil
+	return ioutil.ReadAll(resp.Body)
 }
 
-// Create a Request in ServiceNow
-func abrirRequisicao(token string, requisicaoData map[string]string) (map[string]interface{}, error) {
-	url := fmt.Sprintf("https://%s/api/now/table/requisicoes_ponto", instance)
-	payloadBytes, _ := json.Marshal(requisicaoData)
-
-	req, err := http.NewRequest("POST", url, bytes.NewBuffer(payloadBytes))
+func sendPutRequest(url string, payload interface{}, token string) ([]byte, error) {
+	data, err := json.Marshal(payload)
 	if err != nil {
 		return nil, err
 	}
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
+
+	req, err := http.NewRequest("PUT", url, bytes.NewBuffer(data))
+	if err != nil {
+		return nil, err
+	}
 	req.Header.Set("Content-Type", "application/json")
+	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -106,72 +140,57 @@ func abrirRequisicao(token string, requisicaoData map[string]string) (map[string
 	}
 	defer resp.Body.Close()
 
-	body, _ := ioutil.ReadAll(resp.Body)
-	result := make(map[string]interface{})
-	json.Unmarshal(body, &result)
-
-	return result, nil
-}
-
-// Update Request Status
-func atualizarStatusRequisicao(token, requisicaoID string, statusData map[string]string) (map[string]interface{}, error) {
-	url := fmt.Sprintf("https://%s/api/now/table/requisicoes_ponto?sys_id=%s", instance, requisicaoID)
-	payloadBytes, _ := json.Marshal(statusData)
-
-	req, err := http.NewRequest("PUT", url, bytes.NewBuffer(payloadBytes))
-	if err != nil {
-		return nil, err
-	}
-	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", token))
-	req.Header.Set("Content-Type", "application/json")
-
-	client := &http.Client{}
-	resp, err := client.Do(req)
-	if err != nil {
-		return nil, err
-	}
-	defer resp.Body.Close()
-
-	body, _ := ioutil.ReadAll(resp.Body)
-	result := make(map[string]interface{})
-	json.Unmarshal(body, &result)
-
-	return result, nil
+	return ioutil.ReadAll(resp.Body)
 }
 
 // Execution Flow
 func main() {
 	token, err := loginServiceNow()
 	if err != nil {
-		fmt.Println("Login error:", err)
-		return
+		fmt.Printf("Error logging in: %v\n", err)
+		os.Exit(1)
 	}
 
+	// Example: Query the PONTO system
 	consulta, err := consultaSistemaPonto(token, "requisicao-id-example")
 	if err != nil {
-		fmt.Println("Query error:", err)
-		return
+		fmt.Printf("Error querying PONTO system: %v\n", err)
+	} else {
+		fmt.Printf("PONTO system query: %s\n", consulta)
 	}
-	fmt.Println("Query result:", consulta)
 
+	// Example: Create a request
 	requisicaoData := map[string]string{
 		"example_field": "value",
 	}
 	requisicao, err := abrirRequisicao(token, requisicaoData)
 	if err != nil {
-		fmt.Println("Request creation error:", err)
-		return
+		fmt.Printf("Error creating request: %v\n", err)
+	} else {
+		fmt.Printf("Request created: %s\n", requisicao)
 	}
-	fmt.Println("Request created:", requisicao)
 
+	// Example: Update request status
 	statusData := map[string]string{
 		"status": "Completed",
 	}
-	status, err := atualizarStatusRequisicao(token, "requisicao-id-example", statusData)
+	statusUpdate, err := atualizarStatusRequisicao(token, "requisicao-id-example", statusData)
 	if err != nil {
-		fmt.Println("Status update error:", err)
-		return
+		fmt.Printf("Error updating status: %v\n", err)
+	} else {
+		fmt.Printf("Status updated: %s\n", statusUpdate)
 	}
-	fmt.Println("Status updated:", status)
+
+	// Example: Log audit data
+	auditData := map[string]string{
+		"action":  "Request updated",
+		"details": "The request status was updated to Completed",
+	}
+	auditLog, err := registrarAuditoria(token, auditData)
+	if err != nil {
+		fmt.Printf("Error logging audit data: %v\n", err)
+	} else {
+		fmt.Printf("Audit log created: %s\n", auditLog)
+	}
 }
 ```
