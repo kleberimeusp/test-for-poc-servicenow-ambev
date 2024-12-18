@@ -21,16 +21,16 @@ This README serves as the central documentation for the integration between Serv
 - [Visão Geral da Integração - Português](pt/ServiceNow_PONTO_Integration_README-pt.md)
 
 ### 4. Architectural Model
-- [C4 Model Documentation - Portuguese](pt/c4_model_documentacao-pt.md)
 - [C4 Model Documentation - English](en/c4_model_documentation-en.md)
+- [C4 Model Documentation - Portuguese](pt/c4_model_documentacao-pt.md)
 
 ### 5. Monitoring Tools
-- [Monitoring Tools for ServiceNow Integration - Portuguese](pt/servicenow_monitoring_tools-pt.md)
 - [Monitoring Tools for ServiceNow Integration - English](en/servicenow_monitoring_tools-en.md)
+- [Monitoring Tools for ServiceNow Integration - Portuguese](pt/servicenow_monitoring_tools-pt.md)
 
 ### 6. Detailed Architecture Document
-- [ServiceNow and PONTO Integration Architecture Document - Portuguese](pt/architecture_document_servicenow_ponto-pt.md)
 - [ServiceNow and PONTO Integration Architecture Document - English](en/architecture_document_servicenow_ponto-en.md)
+- [ServiceNow and PONTO Integration Architecture Document - Portuguese](pt/architecture_document_servicenow_ponto-pt.md)
 
 ---
 
