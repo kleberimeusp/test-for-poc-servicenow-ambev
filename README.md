@@ -9,20 +9,20 @@ This README serves as the central documentation for the integration between Serv
 ## Documentation Contents
 
 ### Technology Badges
-![ServiceNow](https://img.shields.io/badge/ServiceNow-Quebec-%237159c1?style=for-the-badge&logo=servicenow&logoColor=white)
-![Git](https://img.shields.io/badge/Git-2.40.0-%237159c1?style=for-the-badge&logo=git)
+![ServiceNow](https://img.shields.io/badge/ServiceNow-Q3%2023-%237159c1?style=for-the-badge&logo=servicenow&logoColor=white)
+![Git](https://img.shields.io/badge/Git-2.47.1-%237159c1?style=for-the-badge&logo=git)
 ![Insomnia](https://img.shields.io/badge/insomnia-2023.1.0-%237159c1?style=for-the-badge&logo=insomnia)
-![C#](https://img.shields.io/badge/C%23-10.0-%237159c1?style=for-the-badge&logo=sharp)
+![C#](https://img.shields.io/badge/C%23-12.0-%237159c1?style=for-the-badge&logo=sharp)
 ![GO](https://img.shields.io/badge/Go-1.19-%237159c1?style=for-the-badge&logo=go)
-![Java 17](https://img.shields.io/badge/Java-17-%237159c1?style=for-the-badge&logo=openjdk&logoColor=white)
+![Java 21](https://img.shields.io/badge/Java-21-%237159c1?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/Kotlin-1.7.0-%237159c1?style=for-the-badge&logo=kotlin)
-![Node.js](https://img.shields.io/badge/Node.js-18.0.0-%237159c1?style=for-the-badge&logo=node.js)
-![PHP](https://img.shields.io/badge/PHP-8.1-%237159c1?style=for-the-badge&logo=php)
+![Node.js](https://img.shields.io/badge/Node.js-22.9.0-%237159c1?style=for-the-badge&logo=node.js)
+![PHP](https://img.shields.io/badge/PHP-8.4.1-%237159c1?style=for-the-badge&logo=php)
 ![Python](https://img.shields.io/badge/Python-3.10.0-%237159c1?style=for-the-badge&logo=python)
-![Ruby](https://img.shields.io/badge/Ruby-3.2.0-%237159c1?style=for-the-badge&logo=ruby)
-![Rust](https://img.shields.io/badge/Rust-1.65.0-%237159c1?style=for-the-badge&logo=rust)
-![Scala](https://img.shields.io/badge/Scala-3.2.0-%237159c1?style=for-the-badge&logo=scala)
-![VB.Net](https://img.shields.io/badge/VB.NET-3.2.0-%237159c1?style=for-the-badge&logo=dot-net&logoColor=white)
+![Ruby](https://img.shields.io/badge/Ruby-3.3.6-%237159c1?style=for-the-badge&logo=ruby)
+![Rust](https://img.shields.io/badge/Rust-1.83.0-%237159c1?style=for-the-badge&logo=rust)
+![Scala](https://img.shields.io/badge/Scala-3.6.2-%237159c1?style=for-the-badge&logo=scala)
+![VB.Net](https://img.shields.io/badge/VB.NET-16.9.15-%237159c1?style=for-the-badge&logo=dot-net&logoColor=white)
 
 
 ### 1. System Integration Overview
