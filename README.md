@@ -1,60 +1,58 @@
 
 # ServiceNow and PONTO System Integration - Technical Documentation
 
-## **Overview**
-This repository contains the complete technical documentation for the integration between **ServiceNow** and the **PONTO System**, following the C4 model and offering instructions for implementation, testing, and monitoring.
-
-## **Repository Structure**
-
-### **1. Architecture Overview**
-- **Documents**:
-  - [Architecture Document - ServiceNow Integration with PONTO System (PT)](pt/architecture_document_servicenow_ponto-pt.md)
-  - [Architecture Document - ServiceNow Integration with PONTO System (EN)](en/architecture_document_servicenow_ponto-en.md)
-- **Proposal**: Explains the complete architecture of the solution, including justifications and technical decisions.
-
-### **2. C4 Model**
-- **Documents**:
-  - [C4 Model Documentation (PT)](pt/c4_model_documentacao-pt.md)
-  - [C4 Model Documentation (EN)](en/c4_model_documentation-en.md)
-- **Description**:
-  - **Level 1 - Context**: Relationship between systems and users.
-  - **Level 2 - Containers**: Structure of containers in the systems.
-  - **Level 3 - Components**: Detailed description of internal components.
-
-### **3. Implementation and Mock**
-- **Documents**:
-  - [Mock Implementation ServiceNow-PONTO (PT)](pt/ServiceNow_PONTO_Integration_README-pt.md)
-  - [Mock Implementation ServiceNow-PONTO (EN)](en/ServiceNow_PONTO_Integration_README-en.md)
-- **Description**: Instructions for implementing a **mock** environment, simulating the legacy PONTO system.
-
-### **4. Technical Documentation and Processes**
-- **Documents**:
-  - [Integration of ServiceNow with PONTO System (PT)](pt/README-pt.md)
-  - [Integration of ServiceNow with PONTO System (EN)](en/README-en.md)
-- **Description**: Practical explanation of the solution, including integration flows and tools.
-
-### **5. Monitoring and Analysis**
-- **Documents**:
-  - [Monitoring Tools for ServiceNow Integration (PT)](pt/servicenow_monitoring_tools-pt.md)
-  - [Monitoring Tools for ServiceNow Integration (EN)](en/servicenow_monitoring_tools-en.md)
-- **Description**: Presentation of monitoring tools such as **Performance Analytics**, **Splunk**, and **Datadog**.
-
-## **Final Objective**
-- Ensure a robust and auditable solution for the integration between ServiceNow and the PONTO System.
-- Provide clear and practical documentation for the development, testing, and demonstration of the solution.
-- Offer visibility and real-time analysis with monitoring tools.
+## Overview
+This README serves as the central documentation for the integration between ServiceNow and the PONTO system. It includes technical details, workflows, and links to both English and Portuguese versions of all relevant materials.
 
 ---
 
-## **How to Use**
-1. Access the main files as needed.
-2. Follow the implementation instructions in `Mock Implementation`.
-3. Refer to the C4 diagrams and documents to understand the architecture.
-4. Use the suggested tools to monitor and analyze performance.
+## Documentation Contents
 
-## **License**
-This project follows the XPTO company license.
+### 1. API Implementation
+- [ServiceNow API Implementation - English](en/servicenow_api_workflow-en.md)
+- [Implementação da API do ServiceNow - Português](sandbox:/mnt/data/servicenow_ponto_api_implementation-pt.md)
+
+### 2. Clock-In Workflow Documentation
+- [ServiceNow Clock-In Workflow - English]((en/servicenow_clockin_api_workflow-pt.md)
+- [Fluxo de Trabalho de Registro de Ponto - Português](sandbox:/mnt/data/servicenow_clockin_api_workflow-pt.md)
+
+### 3. System Integration Overview
+- [ServiceNow and PONTO Integration Overview - English](en/ServiceNow_PONTO_Integration_README-en.md)
+- [Visão Geral da Integração - Português](pt/ServiceNow_PONTO_Integration_README-pt.md)
+
+### 4. Architectural Model
+- [C4 Model Documentation - Portuguese](pt/c4_model_documentacao-pt.md)
+- [C4 Model Documentation - English](en/c4_model_documentacao-en.md)
+
+### 5. Monitoring Tools
+- [Monitoring Tools for ServiceNow Integration - Portuguese](pt/servicenow_monitoring_tools-pt.md)
+- [Monitoring Tools for ServiceNow Integration - English](en/servicenow_monitoring_tools-en.md)
+
+### 6. Detailed Architecture Document
+- [ServiceNow and PONTO Integration Architecture Document - Portuguese](pt/architecture_document_servicenow_ponto-pt.md)
+- [ServiceNow and PONTO Integration Architecture Document - English](en/architecture_document_servicenow_ponto-en.md)
 
 ---
 
-**Last Updated**: `18/12/2024 10:01:02`
+## Features of the Integration
+
+### 1. Multi-Environment Setup
+- **Development**: Mock data to simulate real-world scenarios.
+- **Staging**: Validate integration using controlled real data.
+- **Production**: Full integration with the PONTO system.
+
+### 2. Key Workflows
+- **Clock-In Submission**: Employees submit clock-in data via ServiceNow.
+- **PONTO System Validation**: Validate clock-in data against existing records in the PONTO system.
+- **Status Updates**: ServiceNow retrieves and updates the status of submissions.
+- **Error Handling and Logging**: Centralized logging and error management.
+
+### 3. Monitoring Tools
+- **ServiceNow Performance Analytics**: Monitor workflows and API efficiency.
+- **Event Management**: Real-time alerts for integration issues.
+- **Third-party Tools**: Splunk, Datadog, or ELK stack for advanced log analysis.
+
+---
+
+## Licensing
+This integration documentation is licensed to XPTO for internal use. For inquiries or contributions, please contact the Architecture Team.
