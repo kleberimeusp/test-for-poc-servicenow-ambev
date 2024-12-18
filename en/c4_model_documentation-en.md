@@ -1,9 +1,10 @@
-# C4 Model
+# C4 Model - Documentation
 
 ## 2.1. Level 1 - Context
 ### Description:
-The context level shows the main interactions between **ServiceNow**, the **PONTO System**, and **Employees**.
+The main flow of interaction occurs between **ServiceNow** (request management platform) and the **PONTO System** (legacy), where time records are validated, processed and sent.
 
+### Participants:
 - **ServiceNow**: Central platform for workflow automation.
 - **Employees**: Users who request clock-in registrations.
 - **PONTO System**: External legacy system that receives clock-in submissions.
@@ -41,6 +42,7 @@ The containers detail the systems and their main components.
 ---
 
 ## 2.3. Level 3 - Components
+
 ### Description:
 Details of individual components and their functions.
 
@@ -64,9 +66,32 @@ Details of individual components and their functions.
 
 ---
 
+## Flow Summary:
+1. **Employees** submit timesheets via **ServiceNow**.
+2. ServiceNow **Flow Designer** triggers **REST/SOAP** calls via **Custom Scripts/API**.
+3. Data is sent to **POINT System**, which validates and stores the records.
+4. The **Database** in ServiceNow stores logs and processed records.
+5. Optional logs can be monitored with **Monitoring Tool**.
+
+---
+
+## System View and Flows
+### System Context:
+- **ServiceNow**: Centralizes the automation of requests.
+- **POINT System**: Receives point submissions.
+
+![Context - ServiceNow](img/01-C4Model-Components-SystemContext-pt.png)
+![Context - PONTO System](img/01-C4Model-Components-SystemContext-02-pt.png)
+
+---
+
 ## Summary:
 - **Level 1**: Shows the relationship between users and the main systems.
 - **Level 2**: Details the containers within the systems.
 - **Level 3**: Focuses on the internal components and their responsibilities.
 
 ---
+
+## Complete Flow
+### Interaction Diagram
+![Complete Interaction](img/01-C4Model-Components-SoftwareSystem-pt.png)

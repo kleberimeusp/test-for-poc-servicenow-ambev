@@ -1,8 +1,7 @@
-
 # Modelo C4 - Documentação
 
 ## 2.1. Nível 1 - Contexto
-
+### Descritivo:
 O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de gestão de requisições) e o **Sistema PONTO** (legado), onde registros de ponto são validados, processados e enviados.
 
 ### Participantes:
@@ -10,13 +9,16 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 - **Funcionários**: Usuários que solicitam registros de ponto.
 - **Sistema PONTO**: Sistema legado externo que recebe as submissões de ponto.
 
+### Diagrama:
 ![Nível 1 - Contexto](img/01-C4Model-Context-pt.png)
 
 ---
 
 ## 2.2. Nível 2 - Contêineres
+## Descritivo:
+Os contêineres detalham os sistemas e seus principais componentes.
 
-### ServiceNow:
+#### **ServiceNow**:
 1. **Flow Designer**: Gerencia os fluxos de automação para consultas e submissões ao sistema PONTO.
 2. **Scripted REST API**: Implementa endpoints personalizados para comunicação via REST/SOAP.
 3. **Banco de Dados**: Banco de dados nativo do ServiceNow para registros e logs de requisições.
@@ -27,13 +29,23 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 ### Ferramenta de Monitoramento (Opcional):
 - **Analytics de Desempenho** ou integração com **Splunk/Datadog** para monitoramento de logs e status.
 
+### Diagramas:
+1. **ServiceNow e Sistema PONTO - Contêineres**
 ![Nível 2 - Contêineres](img/01-C4Model-Containers-pt.png)
+
+2. **Flow Designer - Detail**  
+![Flow Designer](img/01-C4Model-Components-Container-02-pt.png)
+
+3. **Sistema PONTO - Detail**  
+![PONTO API](img/01-C4Model-Components-Container-pt.png)
 
 ---
 
 ## 2.3. Nível 3 - Componentes
 
-### Componentes e suas funções:
+### Descritivo:
+Detalhes de componentes individuais e suas funções.
+
 | **Componente**            | **Função**                                         |
 |----------------------------|--------------------------------------------------|
 | **Flow Designer**          | Gerencia fluxos de trabalho para consultas e submissões. |
@@ -70,6 +82,13 @@ O principal fluxo de interação ocorre entre o **ServiceNow** (plataforma de ge
 
 ![Contexto - ServiceNow](img/01-C4Model-Components-SystemContext-pt.png)
 ![Contexto - Sistema PONTO](img/01-C4Model-Components-SystemContext-02-pt.png)
+
+---
+
+## Resumo:
+- **Nível 1**: Mostra o relacionamento entre usuários e os sistemas principais.
+- **Nível 2**: Detalha os contêineres dentro dos sistemas.
+- **Nível 3**: Foca nos componentes internos e suas responsabilidades.
 
 ---
 

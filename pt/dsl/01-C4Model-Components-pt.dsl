@@ -1,7 +1,7 @@
 workspace "Integração ServiceNow-PONTO" "Diagrama de Componentes entre ServiceNow e Sistema PONTO" {
     model {
         servicenow = softwareSystem "ServiceNow" "Plataforma central de automação de workflows" {
-            flowDesigner = container "Designer de Fluxo" "Gerencia o fluxo automatizado para consultas e envios ao sistema PONTO" "ServiceNow" {
+            flowDesigner = container "Flow Designer" "Gerencia o fluxo automatizado para consultas e envios ao sistema PONTO" "ServiceNow" {
                 customScriptsAPI = component "Scripts/Customizados e API" "Implementa chamadas REST/SOAP" "JavaScript/Python"
                 auditingLogs = component "Auditoria e Logs" "Rastreia ações e falhas para rastreabilidade" "Log/Monitoramento"
                 requestTable = component "Tabela de Solicitações" "Armazena solicitações e seus status" "Tabela ServiceNow"
