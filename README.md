@@ -22,7 +22,7 @@ This README serves as the central documentation for the integration between Serv
 
 ### 4. Architectural Model
 - [C4 Model Documentation - Portuguese](pt/c4_model_documentacao-pt.md)
-- [C4 Model Documentation - English](en/c4_model_documentacao-en.md)
+- [C4 Model Documentation - English](en/c4_model_documentation-en.md)
 
 ### 5. Monitoring Tools
 - [Monitoring Tools for ServiceNow Integration - Portuguese](pt/servicenow_monitoring_tools-pt.md)
