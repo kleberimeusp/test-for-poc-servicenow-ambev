@@ -80,8 +80,8 @@ Details of individual components and their functions.
 - **ServiceNow**: Centralizes the automation of requests.
 - **POINT System**: Receives point submissions.
 
-![Context - ServiceNow](img/01-C4Model-Components-SystemContext-pt.png)
-![Context - PONTO System](img/01-C4Model-Components-SystemContext-02-pt.png)
+![Context - ServiceNow](img/01-C4Model-Components-SystemContext-en.png)
+![Context - PONTO System](img/01-C4Model-Components-SystemContext-02-en.png)
 
 ---
 
