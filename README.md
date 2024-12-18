@@ -8,21 +8,21 @@ This README serves as the central documentation for the integration between Serv
 
 ## Documentation Contents
 
-### 1. API Implementation
-- [ServiceNow API Implementation - English](en/servicenow_api_workflow-en.md)
-- [ServiceNow API Implementation - Português](pt/servicenow_ponto_api_implementation-pt.md)
-
-### 2. Clock-In Workflow Documentation
-- [ServiceNow Clock-In Workflow - English](en/servicenow_clockin_api_workflow-en.md)
-- [ServiceNow Clock-In Workflow - Português](pt/servicenow_clockin_api_workflow-pt.md)
-
-### 3. System Integration Overview
+### 1. System Integration Overview
 - [ServiceNow and PONTO Integration Overview - English](en/ServiceNow_PONTO_Integration_README-en.md)
 - [ServiceNow and PONTO Integration Overview - Português](pt/ServiceNow_PONTO_Integration_README-pt.md)
 
-### 4. Architectural Model
+### 2. Architectural Model
 - [C4 Model Documentation - English](en/c4_model_documentation-en.md)
 - [C4 Model Documentation - Portuguese](pt/c4_model_documentacao-pt.md)
+
+### 3. API Implementation
+- [ServiceNow API Implementation - English](en/servicenow_api_workflow-en.md)
+- [ServiceNow API Implementation - Português](pt/servicenow_ponto_api_implementation-pt.md)
+
+### 4. Clock-In Workflow Documentation
+- [ServiceNow Clock-In Workflow - English](en/servicenow_clockin_api_workflow-en.md)
+- [ServiceNow Clock-In Workflow - Português](pt/servicenow_clockin_api_workflow-pt.md)
 
 ### 5. Monitoring Tools
 - [Monitoring Tools for ServiceNow Integration - English](en/servicenow_monitoring_tools-en.md)
