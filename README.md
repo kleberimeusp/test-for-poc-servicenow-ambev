@@ -1,60 +1,60 @@
 
-# Integração ServiceNow e Sistema PONTO - Documentação Técnica
+# ServiceNow and PONTO System Integration - Technical Documentation
 
-## **Visão Geral**
-Este repositório contém a documentação técnica completa da integração entre o **ServiceNow** e o **Sistema PONTO**, seguindo o modelo C4 e oferecendo instruções para implementação, testes e monitoramento.
+## **Overview**
+This repository contains the complete technical documentation for the integration between **ServiceNow** and the **PONTO System**, following the C4 model and offering instructions for implementation, testing, and monitoring.
 
-## **Estrutura do Repositório**
+## **Repository Structure**
 
-### **1. Visão Geral da Arquitetura**
-- **Documentos**:
-  - [Documento de Arquitetura (PT)](pt/architecture_document_servicenow_ponto-pt.md)
-  - [Architecture Document (EN)](en/architecture_document_servicenow_ponto-en.md)
-- **Proposta**: Explica a arquitetura completa da solução, com justificativas e decisões técnicas.
+### **1. Architecture Overview**
+- **Documents**:
+  - [Architecture Document - ServiceNow Integration with PONTO System (PT)](pt/architecture_document_servicenow_ponto-pt.md)
+  - [Architecture Document - ServiceNow Integration with PONTO System (EN)](en/architecture_document_servicenow_ponto-en.md)
+- **Proposal**: Explains the complete architecture of the solution, including justifications and technical decisions.
 
-### **2. Modelo C4**
-- **Documentos**:
-  - [C4 Model - Documentação (PT)](pt/c4_model_documentacao-pt.md)
-  - [C4 Model - Documentation (EN)](en/c4_model_documentation-en.md)
-- **Descrição**:
-  - **Nível 1 - Contexto**: Relação entre sistemas e usuários.
-  - **Nível 2 - Contêineres**: Estrutura de contêineres nos sistemas.
-  - **Nível 3 - Componentes**: Detalhamento dos componentes internos.
+### **2. C4 Model**
+- **Documents**:
+  - [C4 Model Documentation (PT)](pt/c4_model_documentacao-pt.md)
+  - [C4 Model Documentation (EN)](en/c4_model_documentation-en.md)
+- **Description**:
+  - **Level 1 - Context**: Relationship between systems and users.
+  - **Level 2 - Containers**: Structure of containers in the systems.
+  - **Level 3 - Components**: Detailed description of internal components.
 
-### **3. Implementação e Mock**
-- **Documentos**:
-  - [Implementação Mock ServiceNow-PONTO (PT)](pt/implementation_mock_serviceNow_point-pt.md)
-  - [Mock Implementation ServiceNow-PONTO (EN)](en/implementation_mock_serviceNow_point-en.md)
-- **Descrição**: Instruções para implementação de um ambiente **mock**, simulando o sistema legado PONTO.
+### **3. Implementation and Mock**
+- **Documents**:
+  - [Mock Implementation ServiceNow-PONTO (PT)](pt/ServiceNow_PONTO_Integration_README-pt.md)
+  - [Mock Implementation ServiceNow-PONTO (EN)](en/ServiceNow_PONTO_Integration_README-en.md)
+- **Description**: Instructions for implementing a **mock** environment, simulating the legacy PONTO system.
 
-### **4. Documentação Técnica e Processos**
-- **Documentos**:
-  - [README (PT)](pt/README-pt.md)
-  - [README (EN)](en/README-en.md)
-- **Descrição**: Explicação prática da solução, incluindo fluxos de integração e ferramentas.
+### **4. Technical Documentation and Processes**
+- **Documents**:
+  - [Integration of ServiceNow with PONTO System (PT)](pt/README-pt.md)
+  - [Integration of ServiceNow with PONTO System (EN)](en/README-en.md)
+- **Description**: Practical explanation of the solution, including integration flows and tools.
 
-### **5. Monitoramento e Análise**
-- **Documentos**:
-  - [Ferramentas de Monitoramento (PT)](pt/servicenow_monitoring_tools-pt.md)
-  - [Monitoring Tools (EN)](en/servicenow_monitoring_tools-en.md)
-- **Descrição**: Apresentação das ferramentas de monitoramento como **Performance Analytics**, **Splunk**, e **Datadog**.
+### **5. Monitoring and Analysis**
+- **Documents**:
+  - [Monitoring Tools for ServiceNow Integration (PT)](pt/servicenow_monitoring_tools-pt.md)
+  - [Monitoring Tools for ServiceNow Integration (EN)](en/servicenow_monitoring_tools-en.md)
+- **Description**: Presentation of monitoring tools such as **Performance Analytics**, **Splunk**, and **Datadog**.
 
-## **Objetivo Final**
-- Garantir uma solução robusta e auditável para integração entre ServiceNow e Sistema PONTO.
-- Oferecer uma documentação clara e prática para desenvolvimento, testes e demonstração da solução.
-- Proporcionar visibilidade e análise em tempo real com ferramentas de monitoramento.
-
----
-
-## **Como Usar**
-1. Acesse os arquivos principais conforme a necessidade.
-2. Siga as instruções de implementação em `Mock Implementation`.
-3. Consulte os diagramas e documentos C4 para compreender a arquitetura.
-4. Utilize as ferramentas sugeridas para monitorar e analisar o desempenho.
-
-## **Licença**
-Este projeto segue a licença da emprrsa XPTO.
+## **Final Objective**
+- Ensure a robust and auditable solution for the integration between ServiceNow and the PONTO System.
+- Provide clear and practical documentation for the development, testing, and demonstration of the solution.
+- Offer visibility and real-time analysis with monitoring tools.
 
 ---
 
-**Última Atualização**: `18/12/2024 10:01:02`
+## **How to Use**
+1. Access the main files as needed.
+2. Follow the implementation instructions in `Mock Implementation`.
+3. Refer to the C4 diagrams and documents to understand the architecture.
+4. Use the suggested tools to monitor and analyze performance.
+
+## **License**
+This project follows the XPTO company license.
+
+---
+
+**Last Updated**: `18/12/2024 10:01:02`
