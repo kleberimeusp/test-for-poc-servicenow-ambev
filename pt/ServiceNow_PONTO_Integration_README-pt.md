@@ -71,13 +71,13 @@ Passos para os workflows no ServiceNow:
 4. **Recuperar Logs**: Obtenha logs de erro ou auditoria.
 
 Atribuição dinâmica de URL com base no ambiente:
-```json
+```javascript
 if (env === "dev") {
-  base_url = "https://mock-api.ponto.dev";
+    base_url = "https://mock-api.ponto.dev";
 } else if (env === "hml") {
-  base_url = "https://api-hml.ponto.com";
+    base_url = "https://api-hml.ponto.com";
 } else {
-  base_url = "https://api.ponto.com";
+    base_url = "https://api.ponto.com";
 }
 ```
 

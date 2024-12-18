@@ -71,13 +71,13 @@ Steps for workflows in ServiceNow:
 4. **Retrieve Logs**: Fetch error or audit logs.
 
 Dynamic URL assignment based on environment:
-```json
+```javascript
 if (env === "dev") {
-  base_url = "https://mock-api.ponto.dev";
+    base_url = "https://mock-api.ponto.dev";
 } else if (env === "hml") {
-  base_url = "https://api-hml.ponto.com";
+    base_url = "https://api-hml.ponto.com";
 } else {
-  base_url = "https://api.ponto.com";
+    base_url = "https://api.ponto.com";
 }
 ```
 
