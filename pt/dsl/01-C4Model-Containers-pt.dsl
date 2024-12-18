@@ -1,7 +1,7 @@
 workspace "Integração ServiceNow-PONTO" "Diagrama de Contêineres entre ServiceNow e Sistema PONTO" {
     model {
         servicenow = softwareSystem "ServiceNow" "Plataforma central de automação de workflows" {
-            flowDesigner = container "Designer de Fluxo" "Gerencia o fluxo automatizado de consultas e envios ao sistema PONTO" "ServiceNow"
+            flowDesigner = container "Flow Designer" "Gerencia o fluxo automatizado de consultas e envios ao sistema PONTO" "ServiceNow"
             restAPI = container "API REST Script" "Implementa endpoints personalizados para comunicação REST/SOAP" "ServiceNow"
             database = container "Banco de Dados" "Banco de dados nativo para registros e logs de solicitações" "ServiceNow"
         }
