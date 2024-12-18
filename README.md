@@ -14,7 +14,7 @@ This README serves as the central documentation for the integration between Serv
 
 ### 2. Clock-In Workflow Documentation
 - [ServiceNow Clock-In Workflow - English](en/servicenow_clockin_api_workflow-pt.md)
-- [Fluxo de Trabalho de Registro de Ponto - Português](sandbox:/mnt/data/servicenow_clockin_api_workflow-pt.md)
+- [Fluxo de Trabalho de Registro de Ponto - Português](pt/servicenow_clockin_api_workflow-pt.md)
 
 ### 3. System Integration Overview
 - [ServiceNow and PONTO Integration Overview - English](en/ServiceNow_PONTO_Integration_README-en.md)
