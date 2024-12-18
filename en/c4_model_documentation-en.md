@@ -94,4 +94,4 @@ Details of individual components and their functions.
 
 ## Complete Flow
 ### Interaction Diagram
-![Complete Interaction](img/01-C4Model-Components-SoftwareSystem-pt.png)
+![Complete Interaction](img/01-C4Model-Components-SoftwareSystem-en.png)
